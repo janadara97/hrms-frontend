@@ -1,6 +1,6 @@
 import './assets/styles/main.scss';
 import { Provider } from 'react-redux';
-import store from './store/store';
+import store from './store/store.js';
 import Routing from './components/Routing';
 
 
