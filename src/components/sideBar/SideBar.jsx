@@ -9,7 +9,6 @@ import { useSelector } from "react-redux";
 function SideBar(props) {
 
   const menuItems = useSelector((state) => state.menuItems.value);
-  console.log("hi ",menuItems);
 
   const [inactive, setInactive] = useState(false);
 

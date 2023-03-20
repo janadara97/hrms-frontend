@@ -4,6 +4,7 @@ import Dashboard from "./pages/Dashboard";
 import Leave from "./pages/Leave";
 import Profile from "./pages/Profile";
 import SideBar from "./sideBar/SideBar";
+import Login from "./pages/Login";
 
 function Routing() {
 
@@ -11,11 +12,12 @@ function Routing() {
 
     return (
         <Router>
-            <SideBar onCollapse={ (inactive) => {
+            {/* <SideBar onCollapse={ (inactive) => {
                 setInactive(inactive);
-            } } />
+            } } /> */}
             <div className={ `container ${inactive ? "inactive" : ""}` }>
                 <Routes>
+                    <Route exact path="/login" element={ <Login /> } />
                     <Route exact path="/" element={ <Dashboard /> } />
                     <Route path="/leave" element={ <Leave /> } />
                     <Route path="/profile" element={ <Profile /> } />
