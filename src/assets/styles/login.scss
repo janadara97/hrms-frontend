@@ -1,0 +1,155 @@
+.login{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .login-items-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 26%;
+    .login-logo{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      margin-top: 3%;
+      flex: 1;
+      .login-logo-icon{
+        background:url(../images/login/hr-login-icon.png);
+        background: {
+          size: contain;
+          repeat:no-repeat;
+        };
+        width: 80px;
+        height: 80px;
+        display: block;
+      }
+    }
+    .login-content{
+      .login-content-welcome-title{
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+      width: 100%;
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .login-input-container{
+        width: 100%;
+        position: relative;
+        .login-label{
+          position: absolute;
+          left: 8%;
+          bottom:30%;
+          transition: all 0.2s;
+          z-index: 1;
+          color: #b3b3b3;
+        }
+        .login-label::before{
+          height: 5px;
+          background: white;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          z-index: -1;
+        }
+        .login-text-input{
+          padding: 1rem;
+          width: 100%;
+          border: 1px solid #C2C8D0;
+        }
+        .login-label::before{
+          content: "";
+        }
+        .login-text-input:focus{
+          border: 2px solid #0BA37F;
+          outline: none;
+        }
+        .login-text-input:focus + .login-label {
+          bottom: 81%;
+          left: 8%;
+          color: #0BA37F;
+        }
+        .login-text-input::placeholder {
+          opacity: 0;
+          transition: all 0.3s;
+          font-size: 16px;
+        }
+        .login-text-input:focus::placeholder {
+          top: 100px;
+          opacity: 1;
+        }
+        .login-text-input:not(:placeholder-shown).login-text-input + .login-label {
+          bottom: 81%;
+          left: 8%;
+        }
+      }
+    }
+    .login-content-login-button{
+      padding: 5% 8%;
+      border: none;
+      background: #0BA37F;
+      color: white;
+      border-radius: 4px;
+      width: 100%;
+    }
+    .login-content-line-break{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 0.1%;
+    }
+    .login-content-line-break::before{
+      content: "";
+      border-bottom: 1px solid;
+      flex: 1 0 auto;
+      height: 0.8rem;
+    }
+    .login-content-line-break::after{
+      content: "";
+      border-bottom: 1px solid;
+      flex: 1 0 auto;
+      height: 0.8rem;
+    }
+    .login-content-sso{
+      width: 100%;
+        .sso-items{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          gap: 2%;
+          align-items: center;
+          border: 1px solid;
+          margin: 2% 0;
+          padding: 5% 0;
+          .sso-item-logo{
+            .sso-logo{
+              background: url(../images/login/google.svg);
+              background: {
+                size: contain;
+                repeat:no-repeat;
+              };
+              width: 25px;
+              height: 25px;
+              display: block;
+            }
+          }
+          .sso-item-name{
+
+          }
+        }
+    }
+    .login-footer{
+      background: yellow;
+      width: 100%;
+      flex: 1;
+    }
+  }
+}

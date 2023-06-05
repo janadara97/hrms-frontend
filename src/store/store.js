@@ -1,10 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import menuItemReducers from "../features/MenuItems"
+import rootReducer from "../store/slice"
 
 const store = configureStore({
-  reducer: {
-    menuItems: menuItemReducers
-  }
+  reducer: rootReducer,
 });
 
 export default store;
